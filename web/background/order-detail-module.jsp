@@ -45,20 +45,20 @@
 			<span><img src="${ctx}/background/images/leftico01.png"/></span>商品管理
 		</div>
 		<ul class="menuson">
-			<li><cite></cite><a href="${ctx}/admin/list-product.jsp" target="rightFrame">查询所有</a><i></i></li>
-			<li><cite></cite><a href="${ctx}/admin/add-product.jsp" target="rightFrame">添加</a><i></i></li>
-			<li><cite></cite><a href="${ctx}/admin/search-product.jsp" target="rightFrame"><label>查询</label></a><i></i>
+			<li><cite></cite><a href="${ctx}/admin/book/list" target="rightFrame">查询所有</a><i></i></li>
+			<li><cite></cite><a href="${ctx}/admin/book/add" target="rightFrame">添加</a><i></i></li>
+			<li><cite></cite><a href="${ctx}/admin/book/search" target="rightFrame"><label>查询</label></a><i></i>
 			</li>
 		</ul>
 	</dd>
 
 	<dd>
 		<div class="title">
-			<span><img src="${ctx}/background/images/leftico01.png"/></span>
-			<a href="${ctx}/background/product/list">订单管理</a>
+			<span><img src="${ctx}/background/images/leftico01.png"/></span>订单管理
+			<%--<a href="${ctx}/background/product/list">订单管理</a>--%>
 		</div>
 		<ul class="menuson">
-			<li><cite></cite><a href="${ctx}/admin/list-order.jsp" target="rightFrame">查询所有</a><i></i></li>
+			<li><cite></cite><a href="${ctx}/admin/order/list" target="rightFrame">查询所有</a><i></i></li>
 		</ul>
 	</dd>
 </dl>

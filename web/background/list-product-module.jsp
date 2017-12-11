@@ -46,9 +46,9 @@
 			<span><img src="${ctx}/background/images/leftico01.png"/></span>商品管理
 		</div>
 		<ul class="menuson">
-			<li><cite></cite><a href="${ctx}/admin/list-product.jsp" target="rightFrame"><b>查询所有</b></a><i></i></li>
-			<li><cite></cite><a href="${ctx}/admin/add-product.jsp">添加</a><i></i></li>
-			<li><cite></cite><a href="${ctx}/admin/search-product.jsp" target="rightFrame"><label>查询</label></a><i></i>
+			<li><cite></cite><a href="${ctx}/admin/book/list" target="rightFrame"><b>查询所有</b></a><i></i></li>
+			<li><cite></cite><a href="${ctx}/admin/book/add">添加</a><i></i></li>
+			<li><cite></cite><a href="${ctx}/admin/book/search" target="rightFrame"><label>查询</label></a><i></i>
 			</li>
 		</ul>
 	</dd>
@@ -58,7 +58,7 @@
 			<span><img src="${ctx}/background/images/leftico01.png"/></span>订单管理
 		</div>
 		<ul class="menuson">
-			<li><cite></cite><a href="${ctx}/admin/list-order.jsp" target="rightFrame">查询所有</a><i></i></li>
+			<li><cite></cite><a href="${ctx}/admin/order/list" target="rightFrame">查询所有</a><i></i></li>
 		</ul>
 	</dd>
 </dl>
@@ -80,8 +80,8 @@
 				<td>${product.name}</td>
 				<td>${product.price}</td>
 				<td>
-					<a href="${ctx}/admin/edit-product.jsp?id=${product.id}">编辑</a>
-					<a href="${ctx}/admin/delete-product.do?id=${product.id}">删除</a>
+					<a href="${ctx}/admin/book/edit.do?id=${product.id}">编辑</a>
+					<a href="${ctx}/admin/book/delete.do?id=${product.id}">删除</a>
 				</td>
 			</tr>
 		</c:forEach>

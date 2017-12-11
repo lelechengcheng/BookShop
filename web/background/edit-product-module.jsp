@@ -83,9 +83,9 @@
 			<span><img src="${ctx}/background/images/leftico01.png"/></span>商品管理
 		</div>
 		<ul class="menuson">
-			<li><cite></cite><a href="${ctx}/admin/list-product.jsp" target="rightFrame">查询所有</a><i></i></li>
-			<li><cite></cite><a href="${ctx}/admin/add-product.jsp"><b>添加</b></a><i></i></li>
-			<li><cite></cite><a href="${ctx}/admin/search-product.jsp" target="rightFrame"><label>查询</label></a><i></i>
+			<li><cite></cite><a href="${ctx}/admin/book/list" target="rightFrame">查询所有</a><i></i></li>
+			<li><cite></cite><a href="${ctx}/admin/book/add"><b>添加</b></a><i></i></li>
+			<li><cite></cite><a href="${ctx}/admin/book/search" target="rightFrame"><label>查询</label></a><i></i>
 			</li>
 		</ul>
 	</dd>
@@ -95,7 +95,7 @@
 			<span><img src="${ctx}/background/images/leftico01.png"/></span>订单管理
 		</div>
 		<ul class="menuson">
-			<li><cite></cite><a href="${ctx}/admin/list-order.jsp" target="rightFrame">查询所有</a><i></i></li>
+			<li><cite></cite><a href="${ctx}/admin/order/list" target="rightFrame">查询所有</a><i></i></li>
 		</ul>
 	</dd>
 </dl>
@@ -105,7 +105,7 @@
 	</h1>
 	<br>
 	<br>
-	<form action="${ctx}/admin/edit-product.do" method="post" enctype="multipart/form-data">
+	<form action="${ctx}/admin/book/edit.do" method="post" enctype="multipart/form-data">
 		<table align="center" class="imgtable">
 			<tr>
 				<td width="100">商品ID：</td>
@@ -161,7 +161,7 @@
 			<tr>
 				<td>图书图片：</td>
 				<td>
-					<img src="${book_imgUrl}" alt="" style="width: 100%;">
+					<img src="${ctx}${book_imgUrl}" alt="" style="width: 100%;">
 					<input type="file" name="book_image"/>
 				</td>
 				<td>*</td>
