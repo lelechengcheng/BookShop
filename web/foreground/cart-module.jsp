@@ -55,7 +55,7 @@
 	<!----top-header---->
 	<div class="top-header">
 		<div class="logo">
-			<a href="${ctx}/index.jsp"><img src="${ctx}/foreground/images/logo.png" title="网上商城"/></a>
+			<a href="${ctx}/"><img src="${ctx}/foreground/images/logo.png" title="网上商城"/></a>
 		</div>
 		<div class="top-header-info">
 			<div class="top-contact-info">
@@ -66,15 +66,15 @@
 				</ul>
 			</div>
 			<div class="cart-details">
-				<a href="${ctx}/cart.jsp">
+				<a href="${ctx}/cart">
 					<span class="cart">${cart_book_count} 件商品</span>
 				</a>
 				<c:choose>
 					<c:when test="${user == null}">
 						<div class="login-rigister">
 							<ul class="unstyled-list list-inline">
-								<li><a class="login" href="${ctx}/login.jsp">登录</a></li>
-								<li><a class="rigister" href="${ctx}/register.jsp">注册 <span> </span></a></li>
+								<li><a class="login" href="${ctx}/login">登录</a></li>
+								<li><a class="rigister" href="${ctx}/register">注册 <span> </span></a></li>
 								<div class="clearfix"></div>
 							</ul>
 						</div>
@@ -101,10 +101,9 @@
 		<!----start-top-nav---->
 		<nav class="top-nav main-menu">
 			<ul class="top-nav">
-				<li><a href="${ctx}/index.jsp">图书</a><span> </span></li>
-				<li><a href="javascript:alert('功能暂未开放!');">衣服</a><span> </span></li>
-				<li><a href="javascript:alert('功能暂未开放!');">鞋子</a><span> </span></li>
-				<li><a href="javascript:alert('功能暂未开放!');">零食</a><span> </span></li>
+				<li><a href="${ctx}/">热门商品</a><span> </span></li>
+				<li><a href="${ctx}/new">最新商品</a><span> </span></li>
+				<li><a href="${ctx}/all">所有商品</a><span> </span></li>
 				<div class="clearfix"></div>
 			</ul>
 		</nav>
@@ -128,13 +127,14 @@
 			<!----special-products-grids---->
 			<hr>
 			<div class="special-products-grids">
+				<c:set var="sum" value="0"/>
 				<c:forEach var="item" items="${cart == null ? null : cart.orderDetails}">
 					<div class="col-md-12 cart-item special-products-grid">
 						<div class="col-md-2">
 							<img src="${ctx}${item.book.imageUrl}" title="${item.book.name}"/>
 						</div>
 						<div class="col-md-6" style="overflow: hidden;">
-							<span><a href="${ctx}/book.jsp?book_id=${item.book.id}">${item.book.name}</a></span>
+							<span><a href="${ctx}/book?book_id=${item.book.id}">${item.book.name}</a></span>
 						</div>
 						<div class="col-md-4">
 							<span>数量: ${item.count}&nbsp;&nbsp;&nbsp;&nbsp;</span>
@@ -142,9 +142,12 @@
 							<a class="product-btn" href="${ctx}/add_to_cart.do?book_id=${item.book.id}&cart_page=true">增加1件</a>
 						</div>
 					</div>
+					<c:set var="sum" value="${item.book.price * item.count + sum}"/>
 				</c:forEach>
+
 				<div class="clearfix"></div>
 				<div class="add-cart-btn" style="height: 30px;">
+					<span>共计: ${sum}元</span>
 					<input type="button" style="float: right;" value="下订单" onmouseup="window.location.href='${ctx}/order.do'"/>
 				</div>
 			</div>
@@ -158,7 +161,7 @@
 	<div class="footer">
 		<div class="container">
 			<div class="col-md-3 footer-logo">
-				<a href="${ctx}/index.jsp"><img src="${ctx}/foreground/images/flogo.png" title="brand-logo"/></a>
+				<a href="${ctx}/"><img src="${ctx}/foreground/images/flogo.png" title="brand-logo"/></a>
 			</div>
 			<div class="col-md-7 footer-links">
 				<ul class="unstyled-list list-inline">

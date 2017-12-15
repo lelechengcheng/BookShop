@@ -29,7 +29,7 @@
 	<!----top-header---->
 	<div class="top-header">
 		<div class="logo">
-			<a href="${ctx}/index.jsp"><img src="${ctx}/foreground/images/logo.png" title="网上商城" /></a>
+			<a href="${ctx}/"><img src="${ctx}/foreground/images/logo.png" title="网上商城" /></a>
 		</div>
 		<div class="clearfix"> </div>
 	</div>
@@ -44,7 +44,7 @@
 		<div class="special-products">
 			<div class="s-products-head">
 				<div class="s-products-head-left">
-					<h3>登录 | <a href="${ctx}/register.jsp" style="font-size: 60%;">没有账号? 点击注册</a></h3>
+					<h3>登录 | <a href="${ctx}/register" style="font-size: 60%;">没有账号? 点击注册</a></h3>
 				</div>
 				<div class="clearfix"> </div>
 			</div>

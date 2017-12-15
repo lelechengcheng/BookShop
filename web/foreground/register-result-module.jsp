@@ -26,7 +26,7 @@
 	<script>
 		$(document).ready(function () {
 			setTimeout(function () {
-				window.location.href = "${ctx}/index.jsp";
+				window.location.href = "${ctx}/index";
             }, 3000);
         });
 	</script>
@@ -37,7 +37,7 @@
 	<!----top-header---->
 	<div class="top-header">
 		<div class="logo">
-			<a href="${ctx}/index.jsp"><img src="${ctx}/foreground/images/logo.png" title="网上商城" /></a>
+			<a href="${ctx}/"><img src="${ctx}/foreground/images/logo.png" title="网上商城" /></a>
 		</div>
 		<div class="clearfix"> </div>
 	</div>

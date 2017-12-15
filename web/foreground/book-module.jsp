@@ -64,7 +64,7 @@
 	<!----top-header---->
 	<div class="top-header">
 		<div class="logo">
-			<a href="${ctx}/index.jsp"><img src="${ctx}/foreground/images/logo.png" title="网上商城"/></a>
+			<a href="${ctx}/"><img src="${ctx}/foreground/images/logo.png" title="网上商城"/></a>
 		</div>
 		<div class="top-header-info">
 			<div class="top-contact-info">
@@ -75,15 +75,15 @@
 				</ul>
 			</div>
 			<div class="cart-details">
-				<a href="${ctx}/cart.jsp">
+				<a href="${ctx}/cart">
 					<span class="cart">${cart_book_count} 件商品</span>
 				</a>
 				<c:choose>
 					<c:when test="${user == null}">
 						<div class="login-rigister">
 							<ul class="unstyled-list list-inline">
-								<li><a class="login" href="${ctx}/login.jsp">登录</a></li>
-								<li><a class="rigister" href="${ctx}/register.jsp">注册 <span> </span></a></li>
+								<li><a class="login" href="${ctx}/login">登录</a></li>
+								<li><a class="rigister" href="${ctx}/register">注册 <span> </span></a></li>
 								<div class="clearfix"></div>
 							</ul>
 						</div>
@@ -110,10 +110,9 @@
 		<!----start-top-nav---->
 		<nav class="top-nav main-menu">
 			<ul class="top-nav">
-				<li><a href="${ctx}/index.jsp">图书</a><span> </span></li>
-				<li><a href="javascript:alert('功能暂未开放!');">衣服</a><span> </span></li>
-				<li><a href="javascript:alert('功能暂未开放!');">鞋子</a><span> </span></li>
-				<li><a href="javascript:alert('功能暂未开放!');">零食</a><span> </span></li>
+				<li><a href="${ctx}/">热门商品</a><span> </span></li>
+				<li><a href="${ctx}/new">最新商品</a><span> </span></li>
+				<li><a href="${ctx}/all">所有商品</a><span> </span></li>
 				<div class="clearfix"></div>
 			</ul>
 		</nav>
@@ -164,8 +163,8 @@
 							<ul id="etalage">
 								<li>
 									<a>
-										<img class="etalage_thumb_image" src="${book.imageUrl}"/>
-										<img class="etalage_source_image" src="${book.imageUrl}"/>
+										<img class="etalage_thumb_image" src="${ctx}${book.imageUrl}"/>
+										<img class="etalage_source_image" src="${ctx}${book.imageUrl}"/>
 									</a>
 								</li>
 							</ul>
@@ -220,7 +219,7 @@
 	<div class="footer">
 		<div class="container">
 			<div class="col-md-3 footer-logo">
-				<a href="${ctx}/index.jsp"><img src="${ctx}/foreground/images/flogo.png" title="brand-logo"/></a>
+				<a href="${ctx}/"><img src="${ctx}/foreground/images/flogo.png" title="brand-logo"/></a>
 			</div>
 			<div class="col-md-7 footer-links">
 				<ul class="unstyled-list list-inline">

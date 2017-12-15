@@ -37,7 +37,7 @@
 	<!----top-header---->
 	<div class="top-header">
 		<div class="logo">
-			<a href="${ctx}/index.jsp"><img src="${ctx}/foreground/images/logo.png" title="网上商城"/></a>
+			<a href="${ctx}/"><img src="${ctx}/foreground/images/logo.png" title="网上商城"/></a>
 		</div>
 		<div class="top-header-info">
 			<div class="top-contact-info">
@@ -48,15 +48,15 @@
 				</ul>
 			</div>
 			<div class="cart-details">
-				<a href="${ctx}/cart.jsp">
+				<a href="${ctx}/cart">
 					<span class="cart">${cart_book_count} 件商品</span>
 				</a>
 				<c:choose>
 					<c:when test="${user == null}">
 						<div class="login-rigister">
 							<ul class="unstyled-list list-inline">
-								<li><a class="login" href="${ctx}/login.jsp">登录</a></li>
-								<li><a class="rigister" href="${ctx}/register.jsp">注册 <span> </span></a></li>
+								<li><a class="login" href="${ctx}/login">登录</a></li>
+								<li><a class="rigister" href="${ctx}/register">注册 <span> </span></a></li>
 								<div class="clearfix"></div>
 							</ul>
 						</div>
@@ -83,10 +83,9 @@
 		<!----start-top-nav---->
 		<nav class="top-nav main-menu">
 			<ul class="top-nav">
-				<li><a href="javascript:void(0);">图书</a><span> </span></li>
-				<li><a href="javascript:alert('功能暂未开放!');">衣服</a><span> </span></li>
-				<li><a href="javascript:alert('功能暂未开放!');">鞋子</a><span> </span></li>
-				<li><a href="javascript:alert('功能暂未开放!');">零食</a><span> </span></li>
+				<li><a href="${ctx}/">热门商品</a><span> </span></li>
+				<li><a href="${ctx}/new">最新商品</a><span> </span></li>
+				<li><a href="${ctx}/all">所有商品</a><span> </span></li>
 				<div class="clearfix"></div>
 			</ul>
 		</nav>
@@ -103,7 +102,7 @@
 		<div class="special-products">
 			<div class="s-products-head">
 				<div class="s-products-head-left">
-					<h3>图书</h3>
+					<h3>${tag}</h3>
 				</div>
 				<div class="clearfix"></div>
 			</div>
@@ -113,9 +112,9 @@
 
 				<c:forEach var="book" items="${books}">
 					<div class="col-md-3 special-products-grid text-center">
-						<a class="product-here" href="${ctx}/book.jsp?book_id=${book.id}"><img src="${ctx}${book.imageUrl}" title="${book.name}"/></a>
-						<h4><a href="${ctx}/book.jsp?book_id=${book.id}">${book.name}</a></h4>
-						<a class="product-btn" href="${ctx}/book.jsp?book_id=${book.id}"><span>${book.price}元</span>
+						<a class="product-here" href="${ctx}/book?book_id=${book.id}"><img src="${ctx}${book.imageUrl}" title="${book.name}"/></a>
+						<h4><a href="${ctx}/book?book_id=${book.id}">${book.name}</a></h4>
+						<a class="product-btn" href="${ctx}/book?book_id=${book.id}"><span>${book.price}元</span>
 							<small>来看看</small>
 							<label> </label></a>
 					</div>
